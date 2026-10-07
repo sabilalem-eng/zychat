@@ -1,0 +1,8 @@
+{
+  "name": "Zyl-assistent AI - Auto-Pilot Exam Solver",
+  "description": "AI Screen Assistant modern dengan Robot Melayang Auto-Pilot untuk menganalisis dan mengerjakan soal pilihan ganda serta benar/salah secara otomatis.",
+  "requestFramePermissions": [
+    "display-capture"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
