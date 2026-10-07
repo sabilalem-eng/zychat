@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #111111;
+  }
+}
+
+/* Subtle dot pattern background */
+.bg-yellow-dots {
+  background-color: #FFC800;
+  background-image: radial-gradient(rgba(17, 17, 17, 0.12) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+.bg-yellow-dots-dark {
+  background-color: #F5BE00;
+  background-image: radial-gradient(rgba(17, 17, 17, 0.15) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+/* Neo-Brutalist card & button styling */
+.neo-card {
+  background: #FFFFFF;
+  border: 2.5px solid #111111;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px #111111;
+  transition: all 0.15s ease-in-out;
+}
+
+.neo-card-sm {
+  background: #FFFFFF;
+  border: 2px solid #111111;
+  border-radius: 14px;
+  box-shadow: 3px 3px 0px #111111;
+}
+
+.neo-btn {
+  border: 2px solid #111111;
+  border-radius: 14px;
+  font-weight: 800;
+  box-shadow: 3px 3px 0px #111111;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  user-select: none;
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #111111;
+}
+
+.neo-btn-primary {
+  background-color: #00B8D9;
+  color: #111111;
+}
+.neo-btn-primary:hover {
+  background-color: #00A2C0;
+}
+
+.neo-btn-success {
+  background-color: #18C96E;
+  color: #111111;
+}
+.neo-btn-success:hover {
+  background-color: #15B362;
+}
+
+.neo-btn-danger {
+  background-color: #FF3B4E;
+  color: #FFFFFF;
+}
+.neo-btn-danger:hover {
+  background-color: #E62A3D;
+}
+
+/* Robot animations */
+@keyframes robot-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes eye-glow {
+  0%, 100% {
+    box-shadow: 0 0 6px #00F0FF, 0 0 12px #00B8D9;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 10px #00F0FF, 0 0 20px #00B8D9;
+    opacity: 0.9;
+  }
+}
+
+@keyframes eye-blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes scan-radar {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-robot-float {
+  animation: robot-float 3s ease-in-out infinite;
+}
+
+.animate-eye-glow {
+  animation: eye-glow 2s ease-in-out infinite;
+}
+
+.animate-eye-blink {
+  animation: eye-blink 4s ease-in-out infinite;
+}
+
+.animate-scan-radar {
+  animation: scan-radar 1.5s ease-in-out infinite alternate;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 9999px;
+}
